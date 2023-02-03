@@ -24,6 +24,7 @@ export class TicketService {
   }
 
   addTicket(ticket: Ticket) {
+    this.ticketList.push(ticket);
     // You need here to update the list of ticket and then update our observable (Subject) with the new list
     // More info: https://angular.io/tutorial/toh-pt6#the-searchterms-rxjs-subject
   }
