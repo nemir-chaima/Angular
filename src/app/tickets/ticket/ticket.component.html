@@ -4,5 +4,5 @@
   <i class="fas fa-calendar-alt"></i> {{ticket.date | date: 'shortTime'}} &nbsp;&nbsp;
   <i class="far fa-user"></i> {{ticket.student}}
   <i class="fa-thin fa-briefcase"></i> {{ticket.major}}
-  <button type="submit" class="btn-custom" >supprimer</button>
+  <button type="delete" class="btn-custom" (click)="deleteTicket()" >supprimer</button>
 </div>

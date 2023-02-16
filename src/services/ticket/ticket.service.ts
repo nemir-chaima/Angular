@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { Ticket } from '../../models/ticket';
 import { TICKETS_MOCKED } from '../../mocks/tickets.mock';
 import { BehaviorSubject } from 'rxjs/index';
+import { TicketListComponent } from 'src/app/tickets';
 
 @Injectable({
   providedIn: 'root'
@@ -27,5 +28,8 @@ export class TicketService {
     this.ticketList.push(ticket);
     // You need here to update the list of ticket and then update our observable (Subject) with the new list
     // More info: https://angular.io/tutorial/toh-pt6#the-searchterms-rxjs-subject
+  }
+  deleteTicket(ticket:Ticket){
+    this.ticketList.delete(ticket);
   }
 }

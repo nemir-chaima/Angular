@@ -39,5 +39,5 @@ export class TicketFormComponent implements OnInit {
     ticketToCreate.major = 'filiere';
     this.ticketService.addTicket(ticketToCreate);
   }
-
+  
 }
