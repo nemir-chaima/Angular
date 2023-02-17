@@ -30,6 +30,10 @@ export class TicketService {
     // More info: https://angular.io/tutorial/toh-pt6#the-searchterms-rxjs-subject
   }
   deleteTicket(ticket:Ticket){
-    this.ticketList.delete(ticket);
+    this.ticketList.filter((item,index) => {
+      if(ticket.title==item.title){
+        this.ticketList.splice(index,1);
+      }
+    })
   }
 }
